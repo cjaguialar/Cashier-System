@@ -189,7 +189,7 @@ body {
   cursor: pointer;
 }
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px){ 
   .navbar {
     flex-wrap: wrap;
   }
