@@ -62,6 +62,7 @@ body {
   height: 100%;
   overflow: hidden;
   transition: var(--main-transition);
+  z-index: 1000;
 }
 
 .sidebar:hover {
@@ -201,8 +202,7 @@ body {
 }
 
 .tab-content {
-  margin-left: 200px;
-  height: 2000px;
+  margin-left: 100px;
 }
 
 [data-tab-content] {
@@ -211,4 +211,69 @@ body {
 
 .active {
   display: block;
+}
+
+.input-group { 
+  padding: 20px 0;
+  position: relative;
+  z-index: 500;
+}
+
+.input-group input { 
+  width: 25%; 
+  padding: 8px;
+  border: 1.5px solid #f4a1586a;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
+}
+
+.tab-header {
+  padding: 10px 5px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #013d5a;
+}
+
+table {
+  background-color: #fffbf4;
+  border-radius: 20px;
+  width: 95%;
+  padding: 20px;
+  box-shadow: 0 20px 20px rgba(64, 53, 37, 0.1);
+  color: #013d5a;
+  table-layout: fixed;
+}
+
+tr td {
+  border-bottom: 2px solid #013d5a;
+  width: 200px;
+  padding: 10px 15px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.table-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #013c5aaa;
+}
+
+.action-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.actions {
+  border-radius: 15px;
+  background-color: #708c69;
+  color: white;
+  text-align: center;
+  padding: 5px 30px;
+}
+
+a:hover {
+  cursor: pointer;
 }
