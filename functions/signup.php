@@ -1,6 +1,5 @@
 <?php
-
-include ('connect.php');
+include 'connect.php';
 
 if(isset($_POST['signup'])){
     $firstname = $_POST['fname'];
@@ -12,20 +11,25 @@ if(isset($_POST['signup'])){
 
     $checkemail = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($checkemail);
+
     if($result->num_rows > 0){
-        echo "Account already exists";
+        // Alert for existing account
+        echo "<script>alert('Account already exists!'); window.location.href = '../loginsystem.php';</script>";
+        exit();
     }
     else{
         $insertquery = "INSERT INTO users (firstname, lastname, email, password, role)
                         VALUES ('$firstname', '$lastname', '$email', '$password', '$role')";
         if($conn->query($insertquery) === TRUE){
-            header("Location: loginsystem.php");
+            // Redirect to login page after successful signup
+            echo "<script>alert('Signup successful! Please log in.'); window.location.href = '../loginsystem.php';</script>";
             exit();
         }
         else{
-            echo "Error: " . $conn->error;
+            // Alert for database error
+            echo "<script>alert('Error: " . $conn->error . "'); window.location.href = '../loginsystem.php';</script>";
         }
     }
 }
-
 ?>
+

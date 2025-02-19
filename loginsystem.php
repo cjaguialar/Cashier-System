@@ -13,7 +13,7 @@
         <div class="slider">
             <div class="form-box1" id="signIn">
                 <h1 class="form-title" >Sign In</h1>
-                <form method="post" action="signin.php">
+                <form method="post" action="functions/signin.php">
                     <div class="input-group">
                         <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="email">Email</label>
@@ -33,7 +33,7 @@
                     <!--sign up form -->
             <div class="form-box2" id="signUp">
                 <h1 class="form-title" >Register</h1>
-                <form method="post" action="signup.php">
+                <form method="post" action="functions/signup.php">
                 <div class="input-group">
                     <input type="text" name="fname" id="fname" placeholder="First Name" required>
                     <label for="fname">First Name</label>
@@ -51,10 +51,10 @@
                     <label for="password">Password</label>
                 </div>
                 <div class="input-group">
-                        <select id="roleDropdown" name="role" placeholder="Password" required>
+                        <select id="roleDropdown" name="role" required>
                             <option value="" selected disabled hidden></option>
-                            <option value="admin">Admin</option>
-                            <option value="cashier">Cashier</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Cashier">Cashier</option>
                         </select>
                         <label for="role">Select Role</label>
                 </div>

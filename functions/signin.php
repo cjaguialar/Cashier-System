@@ -18,15 +18,15 @@ if (isset($_POST['signin'])) {
 
             // Redirect based on role
             if ($row['role'] == 'admin') {
-                header('location: admindashboard.php');
+                header('location: ../admindashboard.php');
             } elseif ($row['role'] == 'cashier') {
-                header('location: cashierdashboard.php');
+                header('location: ../cashierdashboard.php');
             } else {
                 echo "Invalid user role!";
             }
         exit();
     } else {
-        echo "User does not exist, Wrong Email or Password!";
+        echo "<script>alert('User does not exist'); window.location.href = '../loginsystem.php';</script>";
     }
 }
 ?>
