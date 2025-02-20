@@ -1,3 +1,11 @@
+<?php 
+
+include ('functions/connect.php');
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +67,8 @@
   <div class="categories-header">
     <nav class="navbar">
       <div><a data-tab-target="#all">
-        All Products</a></div>
+        All Products</a>
+      </div>
       <div><a data-tab-target="#alcohol">
         Alcoholic Beverages</a></div>
       <div><a data-tab-target="#baby">
@@ -116,28 +125,42 @@
   <div class="tab-content">
     <div id="all" data-tab-content class="active">
       <div class="input-group">
-        <input type="text" name="search" id="search" placeholder="Search">
+        <input type="text" name="search" id="search" placeholder="Search"> <!---->
        </div>
       <p class="tab-header">
         All Products
       </p>
-      <!--tables per categories-->
+      <!--Table algorithm for showing  all products using sql-->
       <table>
         <tr class="table-title">
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
 
     </div>
