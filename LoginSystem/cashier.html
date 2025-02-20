@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashier</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles/cashierstyle.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="header">
+      loogo
+    </div>
+
+    <div class="pos">
+      <div class="left">
+        <div class="product-scan">
+          <div class="product-name">
+            <div class="barcode">
+              <input type="text" name="barcode" id="barcode" placeholder="Barcode">
+            </div>
+          </div>
+
+          <div class="product-numbers">
+            <div class="quantity">
+                Quantity: 
+                <button class="qty-btn" onclick="decreaseQuantity()">-</button>
+                <span id="quantity-value">1</span>
+                <button class="qty-btn" onclick="increaseQuantity()">+</button>
+            </div>
+            <button class="delete">Delete</button>
+            <div class="product-price">$4.50</div>
+        </div>
+        
+        </div>
+        <div class="product-table">
+          <table>
+            <tr class="table-title">
+              <td>Name</td>
+              <td>Quantity</td>
+              <td>Price</td>
+              <td>Total</td>
+            </tr>
+            <tr>
+              <td> La Leche</td>
+              <td> 2</td>
+              <td> $4.50</td>
+              <td> $9.00</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      
+      <div class="right">
+        <div class="top-right"></div>
+        <div class="top-center">
+          <div class="total-price">
+            <div class="cash">
+            <input type="text" name="cash" id="cash" placeholder="Cash">
+          </div>
+          <div class="total">
+              Total
+            </div>
+            <div class="price">
+              $9.00
+            </div>
+          </div>
+          <div class="change">
+            <div class="total-change">
+              Change
+            </div>
+            <div class="customer-change">
+              $9.00
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</body>
+</html>
