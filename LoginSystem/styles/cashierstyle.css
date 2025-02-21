@@ -204,12 +204,42 @@ tr {
 }
 
 .cash input { 
-  width: 90%; 
+  width: 80%; 
   font-size: 20px;
   padding: 8px;
   border: 2.5px solid #013c5a7e;
   background-color: #ffffff; 
   border-radius: 10px; 
+}
+
+.pay-btn {
+  background-color: #708c69;
+  color: white;
+  border: none;
+  margin-left: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.pay {
+  font-size: 25px;
+  font-weight: bold;
+  color: #013c5ac1;
+  padding-top: 20px;
+}
+
+.total {
+  font-size: 30px;
+  color: #013c5a;
+}
+
+.change {
+  font-size: 30px;
+  color: #013c5a;
+  margin-top: 18px;
 }
 
 .top-center {
