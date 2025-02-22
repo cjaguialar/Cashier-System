@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include 'connect.php';
 
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
