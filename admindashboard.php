@@ -167,6 +167,10 @@ include ('functions/connect.php');
 
     </div>
 
+    <p class="tab-header2">
+        Add Products
+      </p>
+
     <div class="tab-content">
   <div id="all" data-tab-content class="active">
       <div class="table-container2">
@@ -191,7 +195,7 @@ include ('functions/connect.php');
                             <option value="Baby">Baby Products</option>
                         </select>
                   </td>
-                  <td class="action-container">
+                  <td class="action-container2">
                       <a class="actions">Add</a>
                   </td>
               </tr>

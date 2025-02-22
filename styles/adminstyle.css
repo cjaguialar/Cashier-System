@@ -228,14 +228,22 @@ body {
 }
 
 .tab-header {
-  padding: 10px 5px;
+  padding: 5px 5px;
   font-size: 25px;
   font-weight: bold;
   color: #013d5a;
 }
 
+.tab-header2 {
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #013d5a;
+}
+
 .table-container {
-  max-height: 400px;
+  max-height: 350px;
   width: 100%;
   overflow-y: auto;
   padding: 5px;
@@ -290,6 +298,14 @@ tr td {
 }
 
 .action-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.action-container2 {
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   gap: 20px;
