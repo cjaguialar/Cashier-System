@@ -184,6 +184,7 @@ include ('functions/connect.php');
                   <td>Actions</td>
               </tr>
               <tr>
+
     <form action="functions/add_product.php" method="POST">
         <td><input type="text" id="barcode" name="barcode" placeholder="Enter barcode"></td>
         <td><input type="text" id="name" name="name" placeholder="Enter name"></td>
@@ -208,12 +209,10 @@ include ('functions/connect.php');
         
         </td>
         <td class="action-container">
-            
               <button type="submit" class="actions">Add</button>
         </form>
     </td>
 </tr>
-
           </table>
       </div>
   </div>
@@ -282,8 +281,8 @@ include ('functions/connect.php');
           <td> <?php echo $row['price'];?> </td>
           <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
           <?PHP
@@ -306,7 +305,7 @@ include ('functions/connect.php');
           <td>Actions</td>
         </tr>
         <?php
-          $sql = "SELECT * FROM products WHERE category_name='Baby Products' ORDER BY name";
+          $sql = "SELECT * FROM products WHERE category_name='Bakery' ORDER BY name";
           $result = $conn->query($sql);
           echo "<br>";
           if($result->num_rows > 0){
@@ -319,8 +318,8 @@ include ('functions/connect.php');
           <td> <?php echo $row['price'];?> </td>
           <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
           <?PHP
@@ -343,7 +342,7 @@ include ('functions/connect.php');
           <td>Actions</td>
         </tr>
         <?php
-          $sql = "SELECT * FROM products WHERE category_name='Baby Products' ORDER BY name";
+          $sql = "SELECT * FROM products WHERE category_name='Baking Supplies' ORDER BY name";
           $result = $conn->query($sql);
           echo "<br>";
           if($result->num_rows > 0){
@@ -356,8 +355,8 @@ include ('functions/connect.php');
           <td> <?php echo $row['price'];?> </td>
           <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
           <?PHP
@@ -380,7 +379,7 @@ include ('functions/connect.php');
           <td>Actions</td>
         </tr>
         <?php
-          $sql = "SELECT * FROM products WHERE category_name='Baby Products' ORDER BY name";
+          $sql = "SELECT * FROM products WHERE category_name='Beverage Enhancers' ORDER BY name";
           $result = $conn->query($sql);
           echo "<br>";
           if($result->num_rows > 0){
@@ -393,8 +392,8 @@ include ('functions/connect.php');
           <td> <?php echo $row['price'];?> </td>
           <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
           <?PHP
@@ -417,7 +416,7 @@ include ('functions/connect.php');
           <td>Actions</td>
         </tr>
         <?php
-          $sql = "SELECT * FROM products WHERE category_name='Baby Products' ORDER BY name";
+          $sql = "SELECT * FROM products WHERE category_name='Beverages' ORDER BY name";
           $result = $conn->query($sql);
           echo "<br>";
           if($result->num_rows > 0){
@@ -430,8 +429,8 @@ include ('functions/connect.php');
           <td> <?php echo $row['price'];?> </td>
           <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
           <?PHP
@@ -454,7 +453,7 @@ include ('functions/connect.php');
           <td>Actions</td>
         </tr>
         <?php
-          $sql = "SELECT * FROM products WHERE category_name='Baby Products' ORDER BY name";
+          $sql = "SELECT * FROM products WHERE category_name='Biscuits & Wafers' ORDER BY name";
           $result = $conn->query($sql);
           echo "<br>";
           if($result->num_rows > 0){
@@ -467,8 +466,8 @@ include ('functions/connect.php');
           <td> <?php echo $row['price'];?> </td>
           <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
           <?PHP
@@ -491,7 +490,7 @@ include ('functions/connect.php');
           <td>Actions</td>
         </tr>
         <?php
-          $sql = "SELECT * FROM products WHERE category_name='Baby Products' ORDER BY name";
+          $sql = "SELECT * FROM products WHERE category_name='Canned Goods' ORDER BY name";
           $result = $conn->query($sql);
           echo "<br>";
           if($result->num_rows > 0){
@@ -504,8 +503,8 @@ include ('functions/connect.php');
           <td> <?php echo $row['price'];?> </td>
           <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
           <?PHP
@@ -524,17 +523,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Coffee & Tea' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -547,17 +560,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Condiment & Sauces' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -570,17 +597,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Dairy' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -593,17 +634,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Dairy' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
     
@@ -616,17 +671,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Dairy Free Products' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -639,17 +708,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Energy & Sports Drinks' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -662,17 +745,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Frozen Food' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -685,17 +782,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Fruits' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -708,17 +819,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Gluten Free Items' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -731,17 +856,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Grains & Rice' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -754,17 +893,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Household Essentials' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -777,17 +930,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Juices' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -800,17 +967,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Meat' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -823,17 +1004,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Organic Products' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -846,17 +1041,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Personal Care' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -869,17 +1078,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Pet Foods' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
@@ -892,17 +1115,31 @@ include ('functions/connect.php');
           <td>Barcode</td>
           <td>Name</td>
           <td>Price</td>
+          <td>Stock</td>
           <td>Actions</td>
         </tr>
+        <?php
+          $sql = "SELECT * FROM products WHERE category_name='Sanitary' ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
         <tr>
-          <td> 100001234567</td>
-          <td> Fresh Milk</td>
-          <td> P150</td>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
           <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
+      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
           </td>
         </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
       </table>
     </div>
 
