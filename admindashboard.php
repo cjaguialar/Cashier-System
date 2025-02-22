@@ -132,6 +132,7 @@ include ('functions/connect.php');
       </p>
       <!--Table algorithm for showing  all products using sql-->
       <div class="table-container">
+<<<<<<< HEAD
         <table>
           <tr class="table-title">
             <td>Barcode</td>
@@ -163,9 +164,76 @@ include ('functions/connect.php');
                   } //end of while
               ?>
         </table>
+=======
+      <table>
+        <tr class="table-title">
+          <td>Barcode</td>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Stock</td>
+          <td>Actions</td>
+        </tr>
+        <?php
+          $sql = "SELECT * FROM products ORDER BY name";
+          $result = $conn->query($sql);
+          echo "<br>";
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+          
+        ?>
+        <tr>
+          <td> <?php echo $row['barcode'];?> </td> 
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['price'];?> </td>
+          <td> <?php echo $row['stock'];?> </td>
+          <td class="action-container">
+          <a href= "functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+          <a href= "functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+
+          </td>
+        </tr>
+          <?PHP
+                    }
+                } //end of while
+            ?>
+      </table>
+>>>>>>> 95b5f544f96c97dcd23795b48ddfc60cee1e16de
       </div>
 
     </div>
+
+    <div class="tab-content">
+  <div id="all" data-tab-content class="active">
+      <div class="table-container2">
+          <table>
+              <tr class="table-title2">
+                  <td>Barcode</td>
+                  <td>Name</td>
+                  <td>Price</td>
+                  <td>Stocks</td>
+                  <td>Category</td>
+                  <td>Actions</td>
+              </tr>
+              <tr>
+                  <td><input type="text" id="barcode" placeholder="Enter barcode"></td>
+                  <td><input type="text" id="name" placeholder="Enter name"></td>
+                  <td><input type="text" id="price" placeholder="Enter price"></td>
+                  <td><input type="text" id="stocks" placeholder="Enter stocks"></td>
+                  <td>
+                  <select id="categoryDropdown" name="category" required>
+                            <option value="" selected disabled hidden></option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Baby">Baby Products</option>
+                        </select>
+                  </td>
+                  <td class="action-container">
+                      <a class="actions">Add</a>
+                  </td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>
 
     <div id="alcohol" data-tab-content>
       <p class="tab-header">

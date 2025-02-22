@@ -9,7 +9,7 @@ if (isset($_GET['barcode'])) {
 
     if ($stmt->execute()) {
         echo "Product deleted successfully.";
-        header("Location: admindashboard.php");
+        header('location: ../admindashboard.php');
     } else {
         echo "Error deleting product: " . $conn->error;
     }

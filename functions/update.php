@@ -2,22 +2,21 @@
 include 'connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $barcode = $_POST['barcode'];
+    $id = $_POST['id'];
     $name = $_POST['name'];
     $price = $_POST['price'];
     $stock = $_POST['stock'];
     $category_name = $_POST['category_name'];
-    
-    $sql = "INSERT INTO products (barcode, name, price, stock, category_name) VALUES (?, ?, ?, ?, ?)";
+
+    $sql = "UPDATE products SET name=?, price=?, stock=?, category_name=? WHERE id=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssdss", $barcode, $name, $price, $stock, $category_name);
-    
+    $stmt->bind_param("ssdsi", $name, $price, $stock, $category_name, $id);
+
     if ($stmt->execute()) {
-        echo "Product added successfully.";
+        echo "Product updated successfully.";
+        header('location: ../admindashboard.php');
     } else {
         echo "Error: " . $conn->error;
     }
-    
-    $stmt->close();
 }
 ?>
