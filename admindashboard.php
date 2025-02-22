@@ -155,6 +155,7 @@ include ('functions/connect.php');
           <td class="action-container">
           <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
           <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+
           </td>
         </tr>
           <?PHP
