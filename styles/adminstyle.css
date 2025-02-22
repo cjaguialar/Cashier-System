@@ -383,12 +383,22 @@ a:hover {
   background-color: #fffbf4; 
   border-radius: 20px; 
 }
+#barcode:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
 #name { 
   width: 80%; 
   padding: 10px;
   border: 1.5px solid #fffbf4;
   background-color: #fffbf4; 
   border-radius: 20px; 
+}
+#name:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
 }
 #price { 
   width: 80%; 
@@ -397,6 +407,11 @@ a:hover {
   background-color: #fffbf4; 
   border-radius: 20px; 
 }
+#price:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
 #stocks { 
   width: 80%; 
   padding: 10px;
@@ -404,10 +419,20 @@ a:hover {
   background-color: #fffbf4; 
   border-radius: 20px; 
 }
+#stocks:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
 #category { 
   width: 80%; 
   padding: 10px;
   border: 1.5px solid #fffbf4;
   background-color: #fffbf4; 
   border-radius: 20px; 
+}
+#category:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
 }
