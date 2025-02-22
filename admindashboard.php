@@ -201,7 +201,7 @@ include ('functions/connect.php');
         
         </td>
         <td class="action-container">
-              <button type="submit" class="actions">Add</button>
+              <button type="submit" class="actions2">Add</button>
         </form>
       </td>
 </tr>

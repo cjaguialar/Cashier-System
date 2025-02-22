@@ -376,27 +376,38 @@ a:hover {
   padding: 10px;
 }
 
-/* Style only inputs inside the product form */
-.product-form .product-input {
-  width: 100%;
+#barcode { 
+  width: 80%; 
   padding: 10px;
-  font-size: 16px;
-  border: 2px solid #4CAF50; /* Green border */
-  border-radius: 5px;
-  background-color: #f9f9f9; /* Light gray background */
-  color: #333;
-  box-sizing: border-box;
+  border: 1.5px solid #fffbf4;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
 }
-
-/* Placeholder text color */
-.product-form .product-input::placeholder {
-  color: #888;
-  font-style: italic;
+#name { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fffbf4;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
 }
-
-/* Input focus effect */
-.product-form .product-input:focus {
-  outline: none;
-  border-color: #388E3C;
-  background-color: #ffffff;
+#price { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fffbf4;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
+}
+#stocks { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fffbf4;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
+}
+#category { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fffbf4;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
 }
