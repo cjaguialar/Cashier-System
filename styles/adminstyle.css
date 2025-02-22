@@ -298,7 +298,7 @@ tr td {
 
 .actions {
   border-radius: 15px;
-  background-color: #091095;
+  background-color: #708c69;
   color: white;
   text-align: center;
   padding: 5px 30px;
@@ -308,7 +308,16 @@ a:hover {
   cursor: pointer;
 }
 
-.add-input {
-  border: 1px solid #fcf3e3;
-  background-color: blue;
+.input-add { 
+  padding: 20px 0;
+  position: relative;
+  z-index: 500;
+}
+
+.input-add input { 
+  width: 80%; 
+  padding: 5px;
+  border: 1.5px solid #fffbf4;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
 }

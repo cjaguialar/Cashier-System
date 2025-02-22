@@ -180,10 +180,10 @@ include ('functions/connect.php');
                   <td>Actions</td>
               </tr>
               <tr>
-                  <td ><input type="text" id="barcode" placeholder="Enter barcode"></td>
-                  <td><input type="text" id="name" placeholder="Enter name"></td>
-                  <td><input type="text" id="price" placeholder="Enter price"></td>
-                  <td><input type="text" id="stocks" placeholder="Enter stocks"></td>
+                  <td class="input-add"><input type="text" id="barcode" placeholder="Enter barcode"></td>
+                  <td class="input-add"><input type="text" id="name" placeholder="Enter name"></td>
+                  <td class="input-add"><input type="text" id="price" placeholder="Enter price"></td>
+                  <td class="input-add"><input type="text" id="stocks" placeholder="Enter stocks"></td>
                   <td>
                   <select id="categoryDropdown" name="category" required>
                             <option value="" selected disabled hidden></option>
