@@ -1,18 +1,19 @@
+<?php
 include 'connect.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
-    
-    $sql = "DELETE FROM products WHERE id=?";
+if (isset($_GET['barcode'])) {
+    $barcode = $_GET['barcode'];
+    $sql = "DELETE FROM products WHERE barcode = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $id);
-    
+    $stmt->bind_param("s", $barcode);
+
     if ($stmt->execute()) {
         echo "Product deleted successfully.";
+        header("Location: admindashboard.php");
     } else {
-        echo "Error: " . $conn->error;
+        echo "Error deleting product: " . $conn->error;
     }
-    
-    $stmt->close();
+} else {
+    die("Invalid request!");
 }
 ?>
