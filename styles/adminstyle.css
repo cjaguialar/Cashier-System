@@ -228,14 +228,22 @@ body {
 }
 
 .tab-header {
-  padding: 10px 5px;
+  padding: 5px 5px;
   font-size: 25px;
   font-weight: bold;
   color: #013d5a;
 }
 
+.tab-header2 {
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #013d5a;
+}
+
 .table-container {
-  max-height: 400px;
+  max-height: 350px;
   width: 100%;
   overflow-y: auto;
   padding: 5px;
@@ -296,6 +304,14 @@ tr td {
   width: 100%;
 }
 
+.action-container2 {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
 .actions {
   border-radius: 15px;
   background-color: #708c69;
@@ -306,4 +322,18 @@ tr td {
 
 a:hover {
   cursor: pointer;
+}
+
+.input-add { 
+  padding: 20px 0;
+  position: relative;
+  z-index: 500;
+}
+
+.input-add input { 
+  width: 80%; 
+  padding: 5px;
+  border: 1.5px solid #fffbf4;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
 }

@@ -167,6 +167,10 @@ include ('functions/connect.php');
 
     </div>
 
+    <p class="tab-header2">
+        Add Products
+      </p>
+
     <div class="tab-content">
   <div id="all" data-tab-content class="active">
       <div class="table-container2">
