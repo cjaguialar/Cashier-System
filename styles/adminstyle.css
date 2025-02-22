@@ -337,3 +337,33 @@ a:hover {
   background-color: #fffbf4; 
   border-radius: 20px; 
 }
+
+#categoryDropdown {
+  width: 200px; /* Adjust width as needed */
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #fffbf4; /* Green border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #fffbf4; /* Light gray background */
+  color: #013d5a; /* Dark text */
+  cursor: pointer;
+}
+
+/* When the dropdown is hovered */
+#categoryDropdown:hover {
+  background-color: #fffbf4; /* Light green */
+}
+
+/* When the dropdown is focused (clicked) */
+#categoryDropdown:focus {
+  outline: none;
+  border-color: #fffbf4; /* Darker green border */
+  background-color: #fffbf4;
+}
+
+/* Style dropdown options */
+#categoryDropdown option {
+  background-color: #fffbf4; /* White background */
+  color: #013d5a; /* Dark text */
+  padding: 10px;
+}
