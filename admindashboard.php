@@ -43,7 +43,7 @@ include ('functions/connect.php');
       <li class="icon">
         <a href="sales.html">
           <ion-icon name="newspaper-outline"></ion-icon>
-          <p>Sales</p></a>
+          <p>Sale</p></a>
       </li>
     </ul>
 
