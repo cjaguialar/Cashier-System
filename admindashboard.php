@@ -162,10 +162,8 @@ include ('functions/connect.php');
                   <td>Category</td>
                   <td>Actions</td>
               </tr>
-              <tr>
-
+<tr>
     <form action="functions/add_product.php" method="POST">
-      
         <td><input type="text" id="barcode" name="barcode" placeholder="Enter barcode"></td>
         <td><input type="text" id="name" name="name" placeholder="Enter name"></td>
         <td><input type="number" id="price" name="price" placeholder="Enter price" step="0.01"></td>
@@ -187,9 +185,9 @@ include ('functions/connect.php');
         
         </td>
         <td class="action-container">
-              <button type="submit" class="actions">Add</button>
+              <button type="submit" class="actions2">Add</button>
         </form>
-    </td>
+      </td>
 </tr>
           </table>
       </div>
