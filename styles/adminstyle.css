@@ -376,16 +376,27 @@ a:hover {
   padding: 10px;
 }
 
-.input-add { 
-  padding: 20px 0;
-  position: relative;
-  z-index: 500;
+/* Style only inputs inside the product form */
+.product-form .product-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #4CAF50; /* Green border */
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light gray background */
+  color: #333;
+  box-sizing: border-box;
 }
 
-.input-add input { 
-  width: 25%; 
-  padding: 8px;
-  border: 1.5px solid #f4a1586a;
-  background-color: #fffbf4; 
-  border-radius: 20px; 
+/* Placeholder text color */
+.product-form .product-input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Input focus effect */
+.product-form .product-input:focus {
+  outline: none;
+  border-color: #388E3C;
+  background-color: #ffffff;
 }
