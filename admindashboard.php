@@ -199,8 +199,6 @@ include ('functions/connect.php');
                   echo "<option value='" . htmlspecialchars($row['category_name']) . "'>" . htmlspecialchars($row['category_name']) . "</option>";
               }
               echo "</select>";
-
-              $conn->close();  
             ?>
         
         </td>
