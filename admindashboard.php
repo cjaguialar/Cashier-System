@@ -131,6 +131,7 @@ include ('functions/connect.php');
         All Products
       </p>
       <!--Table algorithm for showing  all products using sql-->
+      <div class="table-container">
       <table>
         <tr class="table-title">
           <td>Barcode</td>
@@ -162,6 +163,7 @@ include ('functions/connect.php');
                 } //end of while
             ?>
       </table>
+      </div>
 
     </div>
 
