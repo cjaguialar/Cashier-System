@@ -41,6 +41,6 @@ if (isset($_GET['barcode'])) {
         <input type="text" name="category_name" value="<?php echo $product['category_name']; ?>"><br>
         <input type="submit" value="Update Product">
     </form>
-    <a href="admindashboard.php">Back to Dashboard</a>
+    <a href="../admindashboard.php">Back to Dashboard</a>
 </body>
 </html>
