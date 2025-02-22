@@ -11,25 +11,6 @@
     <!--sign in form -->
     <div class="container" id="container">
         <div class="slider">
-            <div class="form-box1" id="signIn">
-                <h1 class="form-title" >Sign In</h1>
-                <form method="post" action="functions/signin.php">
-                    <div class="input-group">
-                        <input type="email" name="email" id="email" placeholder="Email" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" name="password" id="password" placeholder="Password" required>
-                        <label for="password">Password</label>
-                    </div>
-                    <input type="submit" class="btn" value="Sign In" name="signin">
-                </form>
-                <div class="links">
-                    <p>Don't have an account?</p>
-                    <button onclick="toggleForm()">Sign Up</button>
-                </div>
-            </div>
-
                     <!--sign up form -->
             <div class="form-box2" id="signUp">
                 <h1 class="form-title" >Register</h1>
@@ -65,6 +46,27 @@
                 <div class="links">
                     <p>Already have an account?</p>
                     <button onclick="toggleForm()">Sign In</button>
+                </div>
+            </div>
+
+            <div class="form-box1" id="signIn">
+                <div>
+                <h1 class="form-title" >Sign In</h1>
+                <form method="post" action="functions/signin.php">
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <input type="submit" class="btn" value="Sign In" name="signin">
+                </form>
+                <div class="links">
+                    <p>Don't have an account?</p>
+                    <button onclick="toggleForm()">Sign Up</button>
+                </div>
                 </div>
             </div>
         </div>
