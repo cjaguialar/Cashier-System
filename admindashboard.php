@@ -48,14 +48,6 @@ include ('functions/connect.php');
     </ul>
 
     <ul>
-      <li class="icon">
-        <a href="stocks.html">
-          <ion-icon name="albums-outline"></ion-icon>
-          <p>Stocks</p></a>
-      </li>
-    </ul>
-
-    <ul>
       <li class="logout">
         <a href="loginsystem.php">
           <ion-icon name="log-out-outline"></ion-icon>
