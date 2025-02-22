@@ -132,37 +132,37 @@ include ('functions/connect.php');
       </p>
       <!--Table algorithm for showing  all products using sql-->
       <div class="table-container">
-      <table>
-        <tr class="table-title">
-          <td>Barcode</td>
-          <td>Name</td>
-          <td>Price</td>
-          <td>Stock</td>
-          <td>Actions</td>
-        </tr>
-        <?php
-          $sql = "SELECT * FROM products ORDER BY name";
-          $result = $conn->query($sql);
-          echo "<br>";
-          if($result->num_rows > 0){
-            while($row = $result->fetch_assoc()){
-          
-        ?>
-        <tr>
-          <td> <?php echo $row['barcode'];?> </td> 
-          <td> <?php echo $row['name'];?> </td>
-          <td> <?php echo $row['price'];?> </td>
-          <td> <?php echo $row['stock'];?> </td>
-          <td class="action-container">
-          <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-          <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
-          </td>
-        </tr>
-          <?PHP
-                    }
-                } //end of while
-            ?>
-      </table>
+        <table>
+          <tr class="table-title">
+            <td>Barcode</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Stock</td>
+            <td>Actions</td>
+          </tr>
+          <?php
+            $sql = "SELECT * FROM products ORDER BY name";
+            $result = $conn->query($sql);
+            echo "<br>";
+            if($result->num_rows > 0){
+              while($row = $result->fetch_assoc()){
+            
+          ?>
+          <tr>
+            <td> <?php echo $row['barcode'];?> </td> 
+            <td> <?php echo $row['name'];?> </td>
+            <td> <?php echo $row['price'];?> </td>
+            <td> <?php echo $row['stock'];?> </td>
+            <td class="action-container">
+            <a href= "product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+            <a href= "product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+            </td>
+          </tr>
+            <?PHP
+                      }
+                  } //end of while
+              ?>
+        </table>
       </div>
 
     </div>
