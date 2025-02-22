@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
-/* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -222,7 +220,7 @@ body {
 .input-group input { 
   width: 25%; 
   padding: 8px;
-  border: 1.5px solid #f4a1586a;
+  border: 1.5px solid #977960c8;
   background-color: #fffbf4; 
   border-radius: 20px; 
 }
@@ -244,10 +242,9 @@ body {
 
 .table-container2 {
   height: 150px;
-  width: 107%;
+  width: 100%;
   padding: 5px;
   border-radius: 20px;
-  margin-left: -100px;
 }
 
 .table-container::-webkit-scrollbar {
@@ -263,7 +260,6 @@ table {
   border-radius: 20px;
   width: 100%;
   padding: 20px;
-  box-shadow: 0 20px 20px rgba(64, 53, 37, 0.1);
   color: #013d5a;
   table-layout: fixed;
 }
