@@ -165,14 +165,9 @@ include ('functions/connect.php');
         </table>
       </div>
 
-    </div>
-
     <p class="tab-header2">
         Add Products
       </p>
-
-    <div class="tab-content">
-  <div id="all" data-tab-content class="active">
       <div class="table-container2">
           <table>
               <tr class="table-title2">
@@ -185,6 +180,7 @@ include ('functions/connect.php');
               </tr>
               <tr>
     <form action="functions/add_product.php" method="POST">
+      
         <td><input type="text" id="barcode" name="barcode" placeholder="Enter barcode"></td>
         <td><input type="text" id="name" name="name" placeholder="Enter name"></td>
         <td><input type="number" id="price" name="price" placeholder="Enter price" step="0.01"></td>
@@ -198,7 +194,7 @@ include ('functions/connect.php');
         </td>
         <td class="action-container">
             
-              <button type="submit" class="actions">Add</button>
+              <a type="submit" class="actions2">Add</a>
         </form>
     </td>
 </tr>
@@ -208,6 +204,7 @@ include ('functions/connect.php');
   </div>
 </div>
 
+<div class="tab-content">
     <div id="alcohol" data-tab-content>
       <p class="tab-header">
         Alcohol
@@ -1131,6 +1128,7 @@ include ('functions/connect.php');
                 } //end of while
             ?>
       </table>
+    </div>
     </div>
 
   </div>

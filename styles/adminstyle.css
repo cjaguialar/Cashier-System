@@ -252,10 +252,9 @@ body {
 
 .table-container2 {
   height: 150px;
-  width: 107%;
+  width: 99%;
   padding: 5px;
   border-radius: 20px;
-  margin-left: -100px;
 }
 
 .table-container::-webkit-scrollbar {
@@ -320,6 +319,15 @@ tr td {
   padding: 5px 30px;
 }
 
+.actions2 {
+  border-radius: 15px;
+  background-color: #708c69;
+  color: white;
+  text-align: center;
+  padding: 5px 30px;
+  margin: 5px;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -366,4 +374,18 @@ a:hover {
   background-color: #fffbf4; /* White background */
   color: #013d5a; /* Dark text */
   padding: 10px;
+}
+
+.input-add { 
+  padding: 20px 0;
+  position: relative;
+  z-index: 500;
+}
+
+.input-add input { 
+  width: 25%; 
+  padding: 8px;
+  border: 1.5px solid #f4a1586a;
+  background-color: #fffbf4; 
+  border-radius: 20px; 
 }
