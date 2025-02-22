@@ -49,9 +49,9 @@ include ('functions/connect.php');
 
     <ul>
       <li class="icon">
-        <a href="stocks.html">
-          <ion-icon name="albums-outline"></ion-icon>
-          <p>Stocks</p></a>
+        <a href="#">
+          <ion-icon name="cash-outline"></ion-icon>
+          <p>Cashier</p></a>
       </li>
     </ul>
 
