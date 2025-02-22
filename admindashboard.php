@@ -185,11 +185,20 @@ include ('functions/connect.php');
         <td><input type="number" id="price" name="price" placeholder="Enter price" step="0.01"></td>
         <td><input type="number" id="stocks" name="stock" placeholder="Enter stocks"></td>
         <td>
-            <select id="categoryDropdown" name="category" required>
-                <option value="" selected disabled hidden>Select category</option>
-                <option value="Alcohol">Alcohol</option>
-                <option value="Baby">Baby Products</option>
-            </select>
+            <?php
+                            // Fetch distinct categories
+              $sql = "SELECT DISTINCT category_name FROM products WHERE category_name IS NOT NULL ORDER BY category_name";
+              $result = $conn->query($sql);
+
+              // Generate dropdown
+              echo "<select name='category' id='category'>";
+              echo "<option value=''>Select a Category</option>";
+              while ($row = $result->fetch_assoc()) {
+                  echo "<option value='" . htmlspecialchars($row['category_name']) . "'>" . htmlspecialchars($row['category_name']) . "</option>";
+              }
+              echo "</select>";
+            ?>
+        
         </td>
         <td class="action-container">
               <button type="submit" class="actions">Add</button>
