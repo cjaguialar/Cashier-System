@@ -303,6 +303,7 @@ tr td {
   width: 100%;
 }
 
+
 .action-container2 {
   padding: 20px 0;
   display: flex;
@@ -317,6 +318,7 @@ tr td {
   color: white;
   text-align: center;
   padding: 5px 30px;
+  z-index: 100;
 }
 
 .actions2 {

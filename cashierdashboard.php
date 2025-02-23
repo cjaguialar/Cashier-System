@@ -47,10 +47,7 @@
               <td>Total</td>
             </tr>
             <tr>
-              <td> La Leche</td>
-              <td> 2</td>
-              <td> $4.50</td>
-              <td> $9.00</td>
+<!--tablelogic for showing current session table(sales item)-->
             </tr>
           </table>
         </div>
@@ -66,7 +63,7 @@
           <div class="total">
               Total
             <div class="price">
-              $9.00
+<!----> 
             </div>
               Change
             <div class="change">

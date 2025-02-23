@@ -58,7 +58,7 @@ include ('functions/connect.php');
 
     <ul>
       <li class="icon">
-        <a href="#">
+        <a href="cashierdashboard.php">
           <ion-icon name="cash-outline"></ion-icon>
           <p>Cashier</p></a>
       </li>
@@ -120,7 +120,6 @@ include ('functions/connect.php');
       <p class="tab-header">
         All Products
       </p>
-      <!--Table algorithm for showing  all products using sql-->
       <div class="table-container">
         <table>
           <tr class="table-title">
@@ -136,15 +135,16 @@ include ('functions/connect.php');
 
             if($result->num_rows > 0){
               while($row = $result->fetch_assoc()){
-
+    
           ?>
           <tr>
+            
             <td> <?php echo $row['barcode'];?> </td> 
             <td> <?php echo $row['name'];?> </td>
             <td> <?php echo $row['price'];?> </td>
             <td> <?php echo $row['stock'];?> </td>
             <td class="action-container">
-            <a href= "functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+            <a href= "functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions" onclick="return true;" > Edit</a>
             <a href= "functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
             </td>
           </tr>
@@ -866,22 +866,6 @@ include ('functions/connect.php');
             target.classList.add('active');
         });
     });
-</script>
-
-<script>
-document.querySelector(".actions").addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default anchor behavior
-
-    // Get input values
-    document.getElementById("barcodeInput").value = document.getElementById("barcode").value;
-    document.getElementById("nameInput").value = document.getElementById("name").value;
-    document.getElementById("priceInput").value = document.getElementById("price").value;
-    document.getElementById("stocksInput").value = document.getElementById("stocks").value;
-    document.getElementById("categoryInput").value = document.getElementById("categoryDropdown").value;
-
-    // Submit the form
-    this.closest("form").submit();
-});
 </script>
 
 
