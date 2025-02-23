@@ -42,7 +42,7 @@ include ('functions/connect.php');
 
     <ul>
       <li class="icon">
-        <a href="users.html">
+        <a href="users.php">
           <ion-icon name="people-outline"></ion-icon>
           <p>Users</p></a>
       </li>
