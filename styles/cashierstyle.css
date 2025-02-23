@@ -33,8 +33,19 @@ body {
   border-top-right-radius: 10px;
   color: #013d5a;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-left: 20px;
+}
+
+.admin-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin-right: 10px;
+  background-color: #fcf3e3;
 }
 
 .pos {

@@ -205,6 +205,14 @@ body {
   margin-left: 100px;
 }
 
+.tab-content2 {
+  margin-left: 120px;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #013c5ac7;
+}
+
 [data-tab-content] {
   display: none;
 }
@@ -349,32 +357,28 @@ a:hover {
 }
 
 #categoryDropdown {
-  width: 200px; /* Adjust width as needed */
+  width: 200px; 
   padding: 8px;
   font-size: 16px;
-  border: 2px solid #fffbf4; /* Green border */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #fffbf4; /* Light gray background */
-  color: #013d5a; /* Dark text */
+  border: 2px solid #fffbf4; 
+  background-color: #fffbf4; 
+  color: #013d5a; 
   cursor: pointer;
 }
 
-/* When the dropdown is hovered */
 #categoryDropdown:hover {
-  background-color: #fffbf4; /* Light green */
-}
-
-/* When the dropdown is focused (clicked) */
-#categoryDropdown:focus {
-  outline: none;
-  border-color: #fffbf4; /* Darker green border */
   background-color: #fffbf4;
 }
 
-/* Style dropdown options */
+#categoryDropdown:focus {
+  outline: none;
+  border-color: #fffbf4; 
+  background-color: #fffbf4;
+}
+
 #categoryDropdown option {
-  background-color: #fffbf4; /* White background */
-  color: #013d5a; /* Dark text */
+  background-color: #fffbf4; 
+  color: #013d5a;
   padding: 10px;
 }
 
@@ -389,6 +393,7 @@ a:hover {
   outline: none;
   color: #013d5a;
   font-weight: bold;
+  font-size: 20px;
 }
 #name { 
   width: 80%; 
@@ -434,6 +439,77 @@ a:hover {
   border-radius: 20px; 
 }
 #category:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
+
+#barcode2 { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fcf3e3;
+  background-color: #fcf3e3; 
+  border-radius: 20px; 
+  color: #013c5aae;
+  font-weight: bold;
+}
+#barcode2:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
+#name2 { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fcf3e3;
+  background-color: #fcf3e3; 
+  border-radius: 20px; 
+  color: #013c5aae;
+  font-weight: bold;
+}
+#name2:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
+#price2 { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fcf3e3;
+  background-color: #fcf3e3; 
+  border-radius: 20px; 
+  color: #013c5aae;
+  font-weight: bold;
+}
+#price2:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
+#stock2 { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fcf3e3;
+  background-color: #fcf3e3; 
+  border-radius: 20px; 
+  color: #013c5aae;
+  font-weight: bold;
+}
+#stock2:focus { 
+  outline: none;
+  color: #013d5a;
+  font-weight: bold;
+}
+#category2 { 
+  width: 80%; 
+  padding: 10px;
+  border: 1.5px solid #fcf3e3;
+  background-color: #fcf3e3;  
+  border-radius: 20px; 
+  color: #013c5aae;
+  font-weight: bold;
+}
+#category2:focus { 
   outline: none;
   color: #013d5a;
   font-weight: bold;

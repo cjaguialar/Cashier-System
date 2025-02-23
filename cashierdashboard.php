@@ -15,8 +15,18 @@
   
   <div class="container">
     <div class="header">
-      loogo
+      <div>
+        logo
+      </div>
+
+      <div>
+        <a href="admindashboard.php">
+          <div class="admin-icon"><ion-icon name="person-outline"></ion-icon></div>
+        </a>
+      </div>
     </div>
+
+    
 
     <div class="pos">
       <div class="left">
@@ -75,6 +85,16 @@
     </div>
 
   </div>
+
+  <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+    
+  <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
   
 </body>
 </html>

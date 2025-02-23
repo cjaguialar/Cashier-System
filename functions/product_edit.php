@@ -24,23 +24,55 @@ if (isset($_GET['barcode'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles/adminstyle.css">
 </head>
 <body>
-    <h2>Edit Product</h2>
-    <form action="update.php" method="POST">
-        <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
-        <label>Barcode:</label>
-        <input type="text" name="barcode" value="<?php echo $product['barcode']; ?>" readonly><br>
-        <label>Name:</label>
-        <input type="text" name="name" value="<?php echo $product['name']; ?>" required><br>
-        <label>Price:</label>
-        <input type="number" name="price" value="<?php echo $product['price']; ?>" step="0.01" required><br>
-        <label>Stock:</label>
-        <input type="number" name="stock" value="<?php echo $product['stock']; ?>" required><br>
-        <label>Category:</label>
-        <input type="text" name="category_name" value="<?php echo $product['category_name']; ?>"><br>
-        <input type="submit" value="Update Product">
-    </form>
-    <a href="../admindashboard.php">Back to Dashboard</a>
+
+    <div class="sidebar">
+    <ul>
+      <li class="icon">
+        <a href="../admindashboard.php">
+          <ion-icon name="cart-outline"></ion-icon>
+          <p>Products</p></a>
+      </li>
+    </ul>
+    </div>
+
+    <div class="categories-header"><nav class="navbar">
+      <div><a data-tab-target="#all">
+        Edit Product</a>
+      </div>
+    </nav></div>
+
+    <div class="tab-content2">
+        <p class="tab-header">
+            Edit Product
+        </p>
+        <form action="update.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+            <label>Barcode:</label>
+            <input type="text" id="barcode2" name="barcode" value="<?php echo $product['barcode']; ?>" readonly><br>
+            <label>Name:</label>
+            <input type="text" id="name2" name="name" value="<?php echo $product['name']; ?>" required><br>
+            <label>Price:</label>
+            <input type="number" id="price2" name="price" value="<?php echo $product['price']; ?>" step="0.01" required><br>
+            <label>Stock:</label>
+            <input type="number" id="stock2" name="stock" value="<?php echo $product['stock']; ?>" required><br>
+            <label>Category:</label>
+            <input type="text" id="category2" name="category_name" value="<?php echo $product['category_name']; ?>"><br>
+            <input type="submit" value="Update Product">
+        </form>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+    
+  <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
 </body>
 </html>
