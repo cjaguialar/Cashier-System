@@ -114,22 +114,6 @@ body {
   background-color: #e74c3c;
 }
 
-.delete {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-}
-
-.delete:hover {
-  background-color: #bdd3ce;
-}
-
 .product-price {
   font-size: 25px;
   font-weight: bold;
@@ -215,4 +199,17 @@ tr {
 .top-center {
   flex: 5.5;
   padding: 10px;
+}
+
+.total {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #013c5a;
+}
+
+.price, .change {
+  padding: 10px;
+  font-size: 25px;
+  color: #013c5ac1;
 }

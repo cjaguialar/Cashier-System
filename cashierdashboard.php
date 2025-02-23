@@ -34,7 +34,6 @@
                 <span id="quantity-value">1</span>
                 <button class="qty-btn" onclick="increaseQuantity()">+</button>
             </div>
-            <button class="delete">Delete</button>
             <div class="product-price">$4.50</div>
         </div>
         
@@ -66,16 +65,11 @@
           </div>
           <div class="total">
               Total
-            </div>
             <div class="price">
               $9.00
             </div>
-          </div>
-          <div class="change">
-            <div class="total-change">
               Change
-            </div>
-            <div class="customer-change">
+            <div class="change">
               $9.00
             </div>
           </div>
