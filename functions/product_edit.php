@@ -30,6 +30,21 @@ if (isset($_GET['barcode'])) {
 <body>
 
     <div class="sidebar">
+
+    <div class="profile">
+      <div class="profile-icon"><ion-icon name="person-outline"></ion-icon></div>
+      <div class="profile-name">
+      <?php
+          session_start();
+          if (isset($_SESSION['firstname']) && isset($_SESSION['lastname'])) {
+              echo $_SESSION['firstname'] . " " . $_SESSION['lastname'];
+          } else {
+              echo "Guest";
+      }
+      ?>
+      </div>
+    </div>
+
     <ul>
       <li class="icon">
         <a href="../admindashboard.php">
@@ -61,7 +76,7 @@ if (isset($_GET['barcode'])) {
             <input type="number" id="stock2" name="stock" value="<?php echo $product['stock']; ?>" required><br>
             <label>Category:</label>
             <input type="text" id="category2" name="category_name" value="<?php echo $product['category_name']; ?>"><br>
-            <input type="submit" value="Update Product">
+            <input type="submit" value="Update Product" class="actions">
         </form>
     </div>
 
