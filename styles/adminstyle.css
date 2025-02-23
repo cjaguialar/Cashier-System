@@ -251,7 +251,7 @@ body {
 }
 
 .table-container {
-  max-height: 350px;
+  max-height: 400px;
   width: 100%;
   overflow-y: auto;
   padding: 5px;
@@ -393,7 +393,6 @@ a:hover {
   outline: none;
   color: #013d5a;
   font-weight: bold;
-  font-size: 20px;
 }
 #name { 
   width: 80%; 
