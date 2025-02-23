@@ -20,7 +20,16 @@ include ('functions/connect.php');
 
     <div class="profile">
       <div class="profile-icon"><ion-icon name="person-outline"></ion-icon></div>
-      <div class="profile-name">Sherwin Angelo Ortega</div>
+      <div class="profile-name">
+      <?php
+          session_start();
+          if (isset($_SESSION['firstname']) && isset($_SESSION['lastname'])) {
+              echo $_SESSION['firstname'] . " " . $_SESSION['lastname'];
+          } else {
+              echo "Guest";
+      }
+      ?>
+      </div>
     </div>
 
     <ul>
@@ -108,9 +117,6 @@ include ('functions/connect.php');
 
   <div class="tab-content">
     <div id="all" data-tab-content class="active">
-      <div class="input-group">
-        <input type="text" name="search" id="search" placeholder="Search"> <!---->
-       </div>
       <p class="tab-header">
         All Products
       </p>
@@ -127,10 +133,10 @@ include ('functions/connect.php');
           <?php
             $sql = "SELECT * FROM products ORDER BY name";
             $result = $conn->query($sql);
-            echo "<br>";
+
             if($result->num_rows > 0){
               while($row = $result->fetch_assoc()){
-            
+
           ?>
           <tr>
             <td> <?php echo $row['barcode'];?> </td> 
@@ -162,7 +168,7 @@ include ('functions/connect.php');
                   <td>Category</td>
                   <td>Actions</td>
               </tr>
-<tr>
+    <tr>
     <form action="functions/add_product.php" method="POST">
         <td><input type="text" id="barcode" name="barcode" placeholder="Enter barcode"></td>
         <td><input type="text" id="name" name="name" placeholder="Enter name"></td>
@@ -188,7 +194,7 @@ include ('functions/connect.php');
               <button type="submit" class="actions2">Add</button>
         </form>
       </td>
-</tr>
+      </tr>
           </table>
       </div>
   </div>
@@ -200,35 +206,35 @@ include ('functions/connect.php');
         Alcohol
       </p>
       <table>
-  <tr class="table-title">
-    <td>Barcode</td>
-    <td>Name</td>
-    <td>Price</td>
-    <td>Stock</td>
-    <td>Actions</td>
-  </tr>
-  <?php
-    $sql = "SELECT * FROM products ORDER BY name";
-    $result = $conn->query($sql);
+    <tr class="table-title">
+      <td>Barcode</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td>Stock</td>
+      <td>Actions</td>
+    </tr>
+    <?php
+      $sql = "SELECT * FROM products where category_name ='Alcoholic Beverages' ORDER BY name";
+      $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-      while ($row = $result->fetch_assoc()) {
-  ?>
-  <tr>
-    <td> <?php echo htmlspecialchars($row['barcode']); ?> </td>
-    <td> <?php echo htmlspecialchars($row['name']); ?> </td>
-    <td> <?php echo number_format($row['price'], 2); ?> </td>
-    <td> <?php echo (int)$row['stock']; ?> </td>
-    <td class="action-container">
-      <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
-      <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
-    </td>
-  </tr>
-  <?php
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+    ?>
+    <tr>
+      <td> <?php echo htmlspecialchars($row['barcode']); ?> </td>
+      <td> <?php echo htmlspecialchars($row['name']); ?> </td>
+      <td> <?php echo number_format($row['price'], 2); ?> </td>
+      <td> <?php echo (int)$row['stock']; ?> </td>
+      <td class="action-container">
+        <a href="functions/product_edit.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Edit</a>
+        <a href="functions/product_delete.php?barcode=<?php echo $row['barcode']; ?>" class="actions"> Delete</a>
+      </td>
+    </tr>
+    <?php
+        }
       }
-    }
-  ?>
-</table>
+    ?>
+  </table>
 
     </div>
 

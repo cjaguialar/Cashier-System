@@ -13,6 +13,8 @@ if (isset($_POST['signin'])) {
     if ($result->num_rows > 0) {
         session_start();
         $row = $result->fetch_assoc();
+        $_SESSION['firstname'] = $row['firstname'];
+        $_SESSION['lastname'] = $row['lastname'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['role'] = $row['role']; // Save the user role in the session
 
