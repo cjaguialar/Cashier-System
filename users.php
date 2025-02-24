@@ -72,7 +72,7 @@
   <div class="tab-content">
     <div id="cashiers" data-tab-content class="active">
       <p class="tab-header">
-        Cashiers
+        Cashier
       </p>
       <table>
         <tr class="table-title">
@@ -110,7 +110,7 @@ if ($result->num_rows > 0) {
 
     <div id="admins" data-tab-content>
       <p class="tab-header">
-        Cashiers
+        Admin
       </p>
       <table>
         <tr class="table-title">
