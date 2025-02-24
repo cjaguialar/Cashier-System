@@ -14,6 +14,7 @@ include ('functions/connect.php');
   <title>Admin | Products</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="styles/adminstyle.css">
+  <!-- sherp internal css nalang gamita para di kana ma budlayan -->
 </head>
 <body>
   <div class="sidebar">
@@ -50,7 +51,7 @@ include ('functions/connect.php');
 
     <ul>
       <li class="icon">
-        <a href="sales.html">
+        <a href="functions/sales_report.php">
           <ion-icon name="newspaper-outline"></ion-icon>
           <p>Sale</p></a>
       </li>
