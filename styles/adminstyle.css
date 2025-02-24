@@ -500,6 +500,7 @@ a:hover {
   font-weight: bold;
 }
 #category2 { 
+  appearance: none;
   width: 80%; 
   padding: 10px;
   border: 1.5px solid #fcf3e3;

@@ -65,19 +65,39 @@ if (isset($_GET['barcode'])) {
             Edit Product
         </p>
         <form action="update.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
-            <label>Barcode:</label>
-            <input type="text" id="barcode2" name="barcode" value="<?php echo $product['barcode']; ?>" readonly><br>
-            <label>Name:</label>
-            <input type="text" id="name2" name="name" value="<?php echo $product['name']; ?>" required><br>
-            <label>Price:</label>
-            <input type="number" id="price2" name="price" value="<?php echo $product['price']; ?>" step="0.01" required><br>
-            <label>Stock:</label>
-            <input type="number" id="stock2" name="stock" value="<?php echo $product['stock']; ?>" required><br>
-            <label>Category:</label>
-            <input type="text" id="category2" name="category_name" value="<?php echo $product['category_name']; ?>"><br>
-            <input type="submit" value="Update Product" class="actions">
+          <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+
+          <label>Barcode:</label>
+          <input type="text" id="barcode2" name="barcode" value="<?php echo $product['barcode']; ?>" readonly><br>
+
+          <label>Name:</label>
+          <input type="text" id="name2" name="name" value="<?php echo $product['name']; ?>" required><br>
+
+          <label>Price:</label>
+          <input type="number" id="price2" name="price" value="<?php echo $product['price']; ?>" step="0.01" required><br>
+
+          <label>Stock:</label>
+          <input type="number" id="stock2" name="stock" value="<?php echo $product['stock']; ?>" required><br>
+
+          <label>Category:</label>
+          <select name="category_name" id="category2">
+              <option value="">Select a Category</option>
+              <?php
+              // Fetch distinct categories
+              $sql = "SELECT DISTINCT category_name FROM products WHERE category_name IS NOT NULL ORDER BY category_name";
+              $result = $conn->query($sql);
+
+              // Generate dropdown options
+              while ($row = $result->fetch_assoc()) {
+                  $selected = ($row['category_name'] == $product['category_name']) ? "selected" : "";
+                  echo "<option value='" . htmlspecialchars($row['category_name']) . "' $selected>" . htmlspecialchars($row['category_name']) . "</option>";
+              }
+              ?>
+          </select><br>
+
+          <input type="submit" value="Update Product" class="actions">
         </form>
+
     </div>
 
     <script
