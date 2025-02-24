@@ -51,16 +51,18 @@
         </div>
         <div class="product-table">
           <table>
-            <tr class="table-title" id="productTable">
-              <td>Name</td>
-              <td>Quantity</td>
-              <td>Price</td>
-              <td>Total</td>
-            </tr>
+            <thead>
+              <tr class="table-title" id="productTable">
+                <td>Name</td>
+                <td>Quantity</td>
+                <td>Price</td>
+                <td>Total</td>
+              </tr>
+            </thead>
             <tbody id="salesTable">
         <!-- Fetched product details will appear here -->
 
-          </tbody>
+              </tbody>
           </table>
         </div>
       </div>
