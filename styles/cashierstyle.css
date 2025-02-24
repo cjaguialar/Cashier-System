@@ -224,3 +224,14 @@ tr {
   font-size: 25px;
   color: #013c5ac1;
 }
+
+.checkout-btn {
+  margin-top: 20px;
+  background-color: #708c69;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}

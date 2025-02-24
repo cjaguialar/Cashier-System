@@ -51,7 +51,7 @@ include ('functions/connect.php');
 
     <ul>
       <li class="icon">
-        <a href="functions/sales_report.php">
+        <a href="sales_report.php">
           <ion-icon name="newspaper-outline"></ion-icon>
           <p>Sale</p></a>
       </li>
@@ -59,7 +59,7 @@ include ('functions/connect.php');
 
     <ul>
       <li class="icon">
-        <a href="cashierdashboard.php">
+        <a href="../functions/cashierdashboard.php">
           <ion-icon name="cash-outline"></ion-icon>
           <p>Cashier</p></a>
       </li>

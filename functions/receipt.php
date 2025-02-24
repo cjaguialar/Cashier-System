@@ -49,7 +49,8 @@ $conn->close();
 </head>
 <body>
 
-<div class="receipt">
+<div>
+<div class="receipt" style="margin-top: 80px;">
     <h3>Receipt</h3>
     <p>Sale ID: <?= $sale['id'] ?></p>
     <p>Date: <?= $sale['sale_date'] ?></p>
@@ -77,6 +78,6 @@ $conn->close();
 
     <button class="btn" onclick="window.print()">Print</button>
 </div>
-
+</div>
 </body>
 </html>
