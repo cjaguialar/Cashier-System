@@ -78,20 +78,34 @@
         <tr class="table-title">
           <td>First Name</td>
           <td>Last Name</td>
-          <td>Username</td>
+          <td>Email</td>
           <td>Role</td>
           <td>Actions</td>
         </tr>
-        <tr>
-          <td> Sherwin Angelo</td>
-          <td> Ortega</td>
-          <td> sherkolang</td>
-          <td> Cashier</td>
-          <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
-          </td>
-        </tr>
+        <?php
+include 'functions/connect.php';
+$sql = "SELECT * FROM users WHERE role = 'cashier'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+?>
+<tr>
+  <td><?php echo htmlspecialchars($row['firstname']); ?></td>
+  <td><?php echo htmlspecialchars($row['lastname']); ?></td>
+  <td><?php echo htmlspecialchars($row['email']); ?></td>
+  <td><?php echo htmlspecialchars($row['role']); ?></td>
+  <td class="action-container">
+    <a href="functions/user_edit.php?id=<?php echo $row['id']; ?>" class="actions">Edit</a>
+    <a href="functions/user_delete.php?id=<?php echo $row['id']; ?>" class="actions" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+  </td>
+</tr>
+<?php
+    }
+} else {
+    echo "<tr><td colspan='5'>No cashiers found.</td></tr>";
+}
+?>
+
       </table>
     </div>
 
@@ -107,16 +121,30 @@
           <td>Role</td>
           <td>Actions</td>
         </tr>
-        <tr>
-          <td> Mark Cristian</td>
-          <td> Canete</td>
-          <td> i miss her</td>
-          <td> Admin</td>
-          <td class="action-container">
-          <a class="actions"> Edit</a>
-          <a class="actions"> Delete</a>
-          </td>
-        </tr>
+        <?php
+        include 'functions/connect.php';
+$sql = "SELECT * FROM users WHERE role = 'admin'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+?>
+<tr>
+  <td><?php echo htmlspecialchars($row['firstname']); ?></td>
+  <td><?php echo htmlspecialchars($row['lastname']); ?></td>
+  <td><?php echo htmlspecialchars($row['email']); ?></td>
+  <td><?php echo htmlspecialchars($row['role']); ?></td>
+  <td class="action-container">
+    <a href="functions/user_edit.php?id=<?php echo $row['id']; ?>" class="actions">Edit</a>
+    <a href="functions/user_delete.php?id=<?php echo $row['id']; ?>" class="actions" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+  </td>
+</tr>
+<?php
+    }
+} else {
+    echo "<tr><td colspan='5'>No admins found.</td></tr>";
+}
+?>
+
       </table>
     </div>
   </div>
