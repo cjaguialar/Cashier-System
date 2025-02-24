@@ -2,8 +2,8 @@
 include 'connect.php';
 
 if(isset($_POST['signup'])){
-    $firstname = $_POST['fname'];
-    $lastname = $_POST['lname'];
+    $firstname = ucfirst(strtolower($_POST['fname'])); // Capitalize first letter
+    $lastname = ucfirst(strtolower($_POST['lname']));  // Capitalize first letter
     $email = $_POST['email'];
     $password = $_POST['password'];
     $password = md5($password); // Hashing for security
@@ -32,4 +32,3 @@ if(isset($_POST['signup'])){
     }
 }
 ?>
-

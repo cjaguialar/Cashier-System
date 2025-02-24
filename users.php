@@ -16,7 +16,16 @@
 
     <div class="profile">
       <div class="profile-icon"><ion-icon name="person-outline"></ion-icon></div>
-      <div class="profile-name">Sherwin Angelo Ortega</div>
+      <div class="profile-name">
+      <?php
+          session_start();
+          if (isset($_SESSION['firstname']) && isset($_SESSION['lastname'])) {
+              echo $_SESSION['firstname'] . " " . $_SESSION['lastname'];
+          } else {
+              echo "Guest";
+      }
+      ?>
+      </div>
     </div>
 
     <ul>
