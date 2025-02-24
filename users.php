@@ -37,7 +37,7 @@
 
     <ul>
       <li class="icon">
-        <a href="#">
+        <a href="sales_report.php">
           <ion-icon name="newspaper-outline"></ion-icon>
           <p>Sales</p></a>
       </li>

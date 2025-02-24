@@ -211,6 +211,10 @@
             document.querySelector(".price").innerText = "₱0.00";
             document.querySelector(".change").innerText = "₱0.00";
             document.getElementById("cash").value = "";
+
+             // Open receipt in a new blank page
+             window.open(data.receipt_url, "_blank");
+             
         } else {
             alert("Transaction failed: " + data.message);
         }
