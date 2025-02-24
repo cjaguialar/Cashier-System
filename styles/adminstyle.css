@@ -213,6 +213,11 @@ body {
   color: #013c5ac7;
 }
 
+.tab-content3 {
+  margin-left: 100px;
+  margin-right: 20px;
+}
+
 [data-tab-content] {
   display: none;
 }
@@ -513,4 +518,20 @@ a:hover {
   outline: none;
   color: #013d5a;
   font-weight: bold;
+}
+
+.chart-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.chart {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fffbf4;
+  box-shadow: 2px 5px 5px rgba(64, 53, 37, 0.1);
 }

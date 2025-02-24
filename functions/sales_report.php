@@ -42,24 +42,95 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Report</title>
-    <link rel="stylesheet" href="styles/cashierstyle.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles/adminstyle.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Sales Report</h2>
-    <!-- Buttons for Generating Charts -->
-    <button onclick="generateChart('daily')">Generate Daily Sales</button>
-    <button onclick="generateChart('weekly')">Generate Weekly Sales</button>
+<div class="sidebar">
 
+    <div class="profile">
+      <div class="profile-icon"><ion-icon name="person-outline"></ion-icon></div>
+      <div class="profile-name">
+      <?php
+          session_start();
+          if (isset($_SESSION['firstname']) && isset($_SESSION['lastname'])) {
+              echo $_SESSION['firstname'] . " " . $_SESSION['lastname'];
+          } else {
+              echo "Guest";
+      }
+      ?>
+      </div>
+    </div>
+
+    <ul>
+      <li class="icon">
+        <a href="../admindashboard.php">
+          <ion-icon name="cart-outline"></ion-icon>
+          <p>Products</p></a>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="icon">
+        <a href="../users.php">
+          <ion-icon name="people-outline"></ion-icon>
+          <p>Users</p></a>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="icon">
+        <a href="#">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <p>Sale</p></a>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="icon">
+        <a href="../cashierdashboard.php">
+          <ion-icon name="cash-outline"></ion-icon>
+          <p>Cashier</p></a>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="logout">
+        <a href="../loginsystem.php">
+          <ion-icon name="log-out-outline"></ion-icon>
+          <p>Log Out</p></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="categories-header">
+    <nav class="navbar">
+      <div></div>
+    </nav>
+  </div>
+
+
+<div class="tab-content3">
+<p class="tab-header">
+        Sales Report
+      </p>
     <!-- Chart -->
+    <div class="chart">
     <canvas id="salesChart" width="150" height="50"></canvas> 
+    </div>
 
+    <!-- Buttons for Generating Charts -->
+    <div class="chart-buttons">
+    <button onclick="generateChart('daily')" class="actions">Generate Daily Sales</button>
+    <button onclick="generateChart('weekly')" class="actions">Generate Weekly Sales</button>
+    </div>
+    
     <!-- Sales Table -->
     <table>
-        <tr>
-            <th>ID</th> <th>Total</th> <th>Cash</th> <th>Change</th> <th>Date</th> <th>Action</th>
+        <tr class="table-title">
+            <td>ID</td> <td>Total</td> <td>Cash</td> <td>Change</td> <td>Date</td> <td>Action</td>
         </tr>
         <?php while ($row = $salesData->fetch_assoc()) { ?>
         <tr>
@@ -68,12 +139,13 @@ $conn->close();
             <td>₱<?= number_format($row['cash_given'], 2) ?></td>
             <td>₱<?= number_format($row['change_amount'], 2) ?></td>
             <td><?= $row['sale_date'] ?></td>
-            <td><a href="receipt.php?sale_id=<?= $row['id'] ?>" target="_blank">View</a></td>
+            <td class="action-container"><a href="receipt.php?sale_id=<?= $row['id'] ?>" target="_blank" class="actions" >View</a></td>
         </tr>
         <?php } ?>
-    </table>
+    </table> 
+    
+    
 </div>
-
 <script>
 var salesChart; // Store the chart instance globally
 
@@ -106,6 +178,17 @@ function generateChart(type) {
     });
 }
 </script>
+
+  <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+    
+  <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
+
 
 </body>
 </html>
