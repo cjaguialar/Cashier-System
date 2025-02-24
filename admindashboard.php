@@ -50,7 +50,7 @@ include ('functions/connect.php');
 
     <ul>
       <li class="icon">
-        <a href="sales.html">
+        <a href="functions/sales_report.php">
           <ion-icon name="newspaper-outline"></ion-icon>
           <p>Sale</p></a>
       </li>
